@@ -12,6 +12,7 @@
   "scripts": {
     "dev": "turbo run dev",
     "build": "turbo run build",
+    "start": "turbo run start",
     "test": "echo \"Error: no test specified\" && exit 1"
   },
   "keywords": [],

@@ -3,16 +3,31 @@
   "version": "1.0.0",
   "description": "",
   "main": "index.js",
-  "type": "module",
   "scripts": {
     "dev": "next dev --port=3081",
+    "build": "next build",
+    "start": "next dev --port=3081",
     "test": "echo \"Error: no test specified\" && exit 1"
   },
   "keywords": [],
   "author": "",
   "license": "ISC",
-  "devDependencies": {},
+  "devDependencies": {
+    "api": "*"
+  },
   "dependencies": {
+    "@emotion/react": "^11.10.5",
+    "@emotion/server": "^11.10.0",
+    "@hookform/resolvers": "^2.9.10",
+    "@mantine/core": "^6.0.9",
+    "@mantine/dates": "^6.0.9",
+    "@mantine/form": "^6.0.9",
+    "@mantine/hooks": "^6.0.9",
+    "@mantine/modals": "^6.0.9",
+    "@mantine/next": "^6.0.9",
+    "@mantine/notifications": "^6.0.9",
+    "@tabler/icons-react": "^2.17.0",
+    "cookies-next": "^2.1.1",
     "tsconfig": "*",
     "next": "^13.3.2"
   }

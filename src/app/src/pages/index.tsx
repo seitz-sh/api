@@ -1,4 +1,7 @@
+import { Box } from '@mantine/core';
 
 export default function Homepage() {
-  return <div>hey there</div>
+  return <Box>
+    yooo
+  </Box>
 }

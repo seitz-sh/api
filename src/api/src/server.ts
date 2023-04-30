@@ -12,13 +12,16 @@ const proxyRequest = createReverseProxy({ server }, {
   api: {
     enabled: true,
     match(req, { ws }) {
-      if (ws) {
-        if (!req.url?.startsWith('/_next'))
-          return true; // Matches non-NextJS websockets
-      } else {
-        if (!req.url?.startsWith('/dashboard') && !req.url?.startsWith('/_next'))
-          return true; // Matches API routes
+      if (!req.url?.startsWith('/dashboard')) {
+        return true;
       }
+      // if (ws) {
+      //   if (!req.url?.startsWith('/dashboard/_next'))
+      //     return true; // Matches non-NextJS websockets
+      // } else {
+      //   if (!req.url?.startsWith('/dashboard') && !req.url?.startsWith('/_next'))
+      //     return true; // Matches API routes
+      // }
     },
   },
   app: {
@@ -42,6 +45,6 @@ api.all('/', (req, res) => {
   res.redirect('/dashboard');
 })
 
-api.get('/woah', (req, res) => {
-  res.send(`heya ${new Date()}`)
+api.get('/ping', (req, res) => {
+  res.send(`${new Date()}`)
 })
