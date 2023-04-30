@@ -1,0 +1,30 @@
+{
+  "name": "seitz-api",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "type": "module",
+  "workspaces": [
+    "lib/*",
+    "src/*",
+    "src/services/*"
+  ],
+  "scripts": {
+    "dev": "turbo run dev",
+    "build": "turbo run build",
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "devDependencies": {},
+  "dependencies": {
+    "tsconfig": "*",
+    "turbo": "^1.9.3"
+  },
+  "packageManager": "npm@8.19.2",
+  "engines": {
+    "npm": ">=7.0.0",
+    "turbo": ">=14.0.0"
+  }
+}
